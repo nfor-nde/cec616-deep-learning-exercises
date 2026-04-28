@@ -1,0 +1,52 @@
+# Core Notebook Environment
+ipykernel
+protobuf
+
+# Core Scientific Stack
+numpy
+pandas
+scipy
+matplotlib
+seaborn
+
+# Machine Learning Utilities
+scikit-learn
+joblib
+
+# Deep Learning Frameworks
+torch
+torchvision
+torchaudio
+tensorflow
+keras
+
+# Dataset Utilities
+tensorflow-datasets
+datasets
+kaggle
+opencv-python
+pillow
+importlib_resources
+
+# Visualization for Deep Learning
+tensorboard
+plotly
+
+# Model Utilities
+transformers
+accelerate
+
+# Data Processing
+albumentations
+scikit-image
+
+# Experiment Tracking
+wandb
+
+# Notebook Enhancements
+ipywidgets
+rich
+
+# Misc
+requests
+python-dotenv
