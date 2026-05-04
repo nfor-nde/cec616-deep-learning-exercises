@@ -1,3 +1,11 @@
 .venv/
-/data
-/scripts/data
+**/data
+**/logs    
+**/*.keras
+**/*.png
+**/*.pdf
+**/*.json
+**/*.csv
+**/*.pt
+**/.DS_Store
+**/*.ipynb_checkpoints
