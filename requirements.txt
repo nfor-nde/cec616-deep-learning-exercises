@@ -50,3 +50,4 @@ rich
 # Misc
 requests
 python-dotenv
+ultralytics
