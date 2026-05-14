@@ -3,6 +3,9 @@
 **/logs    
 **/*.keras
 **/*.png
+**/*.jpg
+**/*.jpeg
+**/*.svg
 **/*.pdf
 **/*.json
 **/*.csv
