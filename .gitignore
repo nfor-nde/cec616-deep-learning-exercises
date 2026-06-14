@@ -11,6 +11,7 @@
 **/*.json
 **/*.csv
 **/*.pt
+**/*.task
 **/.DS_Store
 **/*.ipynb_checkpoints
 **/runs
