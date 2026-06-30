@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Classification Result</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        .container {
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #333;
+            text-align: center;
+        }
+        .result-box {
+            background-color: #e8f5e8;
+            border-left: 6px solid #4CAF50;
+            padding: 20px;
+            margin: 20px 0;
+        }
+        .prediction {
+            font-size: 24px;
+            font-weight: bold;
+            color: #4CAF50;
+            text-align: center;
+        }
+        .probabilities {
+            margin-top: 20px;
+        }
+        .probability-item {
+            margin-bottom: 10px;
+        }
+        .probability-bar {
+            background-color: #f0f0f0;
+            height: 20px;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        .probability-fill {
+            height: 100%;
+            background-color: #4CAF50;
+            text-align: right;
+            padding-right: 5px;
+            color: white;
+            line-height: 20px;
+            font-size: 12px;
+        }
+        .button {
+            display: inline-block;
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 4px;
+            margin-top: 20px;
+        }
+        .button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Classification Result</h1>
+        
+        <div class="result-box">
+            <div class="prediction">
+                {{ result.class_name | capitalize }}
+            </div>
+        </div>
+        
+        <div class="probabilities">
+            <h3>Probabilities:</h3>
+            {% for class_name, prob in result.probabilities.items() %}
+            <div class="probability-item">
+                <strong>{{ class_name | capitalize }}:</strong> {{ "%.2f"|format(prob*100) }}%
+                <div class="probability-bar">
+                    <div class="probability-fill" style="width: {{ prob * 100 }}%">
+                        {{ "%.1f"|format(prob*100) }}%
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+        
+        <a href="/" class="button">Make Another Prediction</a>
+    </div>
+</body>
+</html>
